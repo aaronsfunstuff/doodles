@@ -4,25 +4,62 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: #ffb6b9;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
+}
+
+.nav-container h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #faf3e0;
 }
 
 .container {
+    flex: 1;
     background: #ffffff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     border-radius: 10px;
+    margin: 20px;
 }
 
-h1 {
-    margin-bottom: 20px;
+h1, h2 {
     color: #ffb6b9;
-}
-h2{
-  color:#ffb6b9
 }
 
 button {
@@ -41,7 +78,7 @@ button:hover {
     background-color: #ff9a9e;
 }
 
-#prompt, #draw-prompt {
+#prompt {
     font-size: 18px;
     margin-bottom: 20px;
     color: #a0ced9;
@@ -58,6 +95,16 @@ button:hover {
     padding: 10px;
     border-radius: 5px;
     color: #ffb6b9;
+}
+
+footer {
+    background-color: #ffb6b9;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 canvas {
