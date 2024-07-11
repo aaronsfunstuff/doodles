@@ -41,3 +41,4 @@ function newPrompt() {
 }
 
 document.addEventListener('DOMContentLoaded', newPrompt);
+
