@@ -7,13 +7,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav>
+        <div class="nav-container">
+            <h1>Daily Doodle</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="draw.html">Draw</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="container">
-        <h1>Daily Doodle</h1>
+        <h2>Today's Prompt</h2>
         <p id="prompt"></p>
         <button onclick="newPrompt()">Get New Prompt</button>
+        <a href="draw.html" id="draw-link"><button>Start Drawing</button></a>
         <h2>Previous Prompts</h2>
         <ul id="previous-prompts"></ul>
     </div>
+    <footer>
+        <p>&copy; 2024 Daily Doodle. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
