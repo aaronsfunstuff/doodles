@@ -10,6 +10,18 @@ document.addEventListener('DOMContentLoaded', () => {
     canvas.height = 600;
     let drawing = false;
 
+    const colorPicker = document.createElement('input');
+    colorPicker.type = 'color';
+    colorPicker.value = '#000000';
+    document.querySelector('.container').appendChild(colorPicker);
+
+    const brushSize = document.createElement('input');
+    brushSize.type = 'range';
+    brushSize.min = 1;
+    brushSize.max = 20;
+    brushSize.value = 5;
+    document.querySelector('.container').appendChild(brushSize);
+
     canvas.addEventListener('mousedown', () => {
         drawing = true;
     });
@@ -24,9 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function draw(event) {
         if (!drawing) return;
 
-        context.lineWidth = 5;
+        context.lineWidth = brushSize.value;
         context.lineCap = 'round';
-        context.strokeStyle = '#a0ced9';
+        context.strokeStyle = colorPicker.value;
 
         context.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
         context.stroke();
