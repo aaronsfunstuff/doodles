@@ -33,7 +33,7 @@ button {
     color: #ffffff;
     border: none;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin: 10px 0;
     transition: background-color 0.3s ease;
 }
 
@@ -41,7 +41,7 @@ button:hover {
     background-color: #ff9a9e;
 }
 
-#prompt {
+#prompt, #draw-prompt {
     font-size: 18px;
     margin-bottom: 20px;
     color: #a0ced9;
@@ -58,4 +58,10 @@ button:hover {
     padding: 10px;
     border-radius: 5px;
     color: #ffb6b9;
+}
+
+canvas {
+    border: 1px solid #ffb6b9;
+    margin-top: 20px;
+    background-color: #fff;
 }
